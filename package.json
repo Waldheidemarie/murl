@@ -1,0 +1,23 @@
+{
+  "name": "murals-app",
+  "version": "1.0.0",
+  "description": "Express application for displaying street art.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iancover/murals-app.git"
+  },
+  "author": "Ian Cover",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iancover/murals-app/issues"
+  },
+  "homepage": "https://github.com/iancover/murals-app#readme",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+}
