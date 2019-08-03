@@ -1,0 +1,14 @@
+
+<%  include partials/header %>
+
+    <div>
+        <% murals.forEach(mural => { %>
+            <% console.log('mural rendered'); %>
+            <div>
+                <h4><%= mural.title %></h4>
+                <p><%= mural.artist %></p>
+            </div>
+        <% }); %> 
+    </div>
+
+<%  include partials/footer %>
