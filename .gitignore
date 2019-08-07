@@ -1,6 +1,13 @@
-Guide.md
-DS_Store
-node_modules
+
+# dependencies
+/node_modules
+
+# misc
+.DS_Store
 .env
+.env.local
+.env.json
+npm-debug.log*
 *.log
 ._*
+Guide.md
