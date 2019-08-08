@@ -1,11 +1,13 @@
 
 const express = require('express');
 const app = express();
+const methodOverride = require('method-override');
 require('dot-env');
 
 app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
+app.use(methodOverride('_method'));
 
 const murals = [
   {
@@ -30,25 +32,25 @@ const murals = [
     image: '/images/i-love-you-so-much.jpg'
   },
   {
-    title: "Girl with pink glasses",
-    artist: "Unknown",
-    city: "Birmingham, UK",
-    credit: "Unknown",
-    image: "/images/woman-glasses.jpg"
+    title: 'Girl with pink glasses',
+    artist: 'Unknown',
+    city: 'Birmingham, UK',
+    credit: 'Unknown',
+    image: '/images/woman-glasses.jpg'
   },
   {
     title: "Don't be so hard on yourself",
-    artist: "WRDSMTH",
-    city: "Los Angeles, CA",
-    credit: "Matt Winkelmeyer",
-    image: "/images/never-ever-giveup.jpg"
+    artist: 'WRDSMTH',
+    city: 'Los Angeles, CA',
+    credit: 'Matt Winkelmeyer',
+    image: '/images/never-ever-giveup.jpg'
   },
   {
-    title: "The 27 Club",
-    artist: "Eduardo Kobra",
-    city: "New York, NY",
-    credit: "Unknown",
-    image: "/images/the-27-club.jpg"
+    title: 'The 27 Club',
+    artist: 'Eduardo Kobra',
+    city: 'New York, NY',
+    credit: 'Unknown',
+    image: '/images/the-27-club.jpg'
   }
 ];
 
