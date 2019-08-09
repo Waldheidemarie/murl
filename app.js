@@ -1,7 +1,8 @@
-
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
+
+
 require('dot-env');
 
 app.use(express.urlencoded({extended: true}));
@@ -58,14 +59,14 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
-// Index
-// -------
+// INDEX: show all
+// ----------------
 app.get('/murals', (req, res) => {
   res.render('murals/indexMurals', {murals: murals});
 });
 
-// Create
-// --------
+// Create: add new mural
+// ----------------------
 app.post('/murals', (req, res) => {
   const title = req.body.title;
   const artist = req.body.artist;
@@ -81,11 +82,14 @@ app.post('/murals', (req, res) => {
   res.redirect('/murals');
 });
 
-// New
-// -------
+// NEW: show form to create
+// ------------------------
 app.get('/murals/new', (req, res) => {
   res.render('murals/newMural');
 });
+
+// SHOW: show single mural
+// -----------------------
 
 
 
