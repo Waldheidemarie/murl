@@ -1,10 +1,14 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 const methodOverride = require('method-override');
-
-
 require('dot-env');
 
+// MODELS
+// --------
+const {Mural, Comment, User} = require('/models');
+
+mongoose.connect(MONGO_URL, {useNewUrlParser: true});
 app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -65,21 +69,31 @@ app.get('/murals', (req, res) => {
   res.render('murals/indexMurals', {murals: murals});
 });
 
-// Create: add new mural
+// CREATE: add new mural
 // ----------------------
 app.post('/murals', (req, res) => {
   const title = req.body.title;
   const artist = req.body.artist;
-  const city = req.body.city;
+  const location = req.body.location;
   const image = req.body.image;
-  const newMural = { 
-    title: title, 
+  const author = { id: req.user._id, username: req.user.username };
+  const desc = req.body.description;
+  const newMural = {
+    title: title,
     artist: artist,
-    city: city,
-    image: image
+    location: location,
+    image: image,
+    author: author,
+    description: desc
   };
-  murals.push(newMural);
-  res.redirect('/murals');
+  Mural.create(newMural, (err, newlyCreated) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(newlyCreated);
+      res.redirect('/murals');
+    }
+  });
 });
 
 // NEW: show form to create
