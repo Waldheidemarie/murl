@@ -11,3 +11,8 @@ npm-debug.log*
 *.log
 ._*
 Guide.md
+package-lock.json
+.npmrc
+._*
+.svn
+.git
