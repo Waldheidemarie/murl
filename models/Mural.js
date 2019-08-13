@@ -1,24 +1,33 @@
 const mongoose = require('mongoose');
+
 const Schema = mongoose.Schema;
 
 const muralSchema = new Schema({
   title: String,
   artist: String,
-  location: String,
-  image: String,
-  author: {
-    id: {
-      type: Schema.Types.ObjectId,
-      ref: 'User'
-    }
+  location: {
+    city: String,
+    state: String
   },
-  description: String,
-  comments: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Comment'
-    }
-  ]
+  credit: String,
+  image: String,
+  info: String
 });
 
 module.exports = mongoose.model('Mural', muralSchema);
+
+// LINK USER/COMMENT SCHEMA
+// -------------------------
+  // author: {
+  //   id: {
+  //     type: Schema.Types.ObjectId,
+  //     ref: 'User'
+  //   }
+  // },
+  // description: String,
+  // comments: [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: 'Comment'
+  //   }
+  // ]
