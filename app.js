@@ -71,7 +71,15 @@ app.get('/murals/new', (req, res) => {
 
 // SHOW: show single mural
 // -----------------------
-
+app.get('/murals/:id', (req, res) => {
+  Mural.findById(req.params.id, (err, foundMural) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('murals/showMural', {mural: foundMural});
+    }
+  });
+});
 
 
 // CATCH ALL

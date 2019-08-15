@@ -20,9 +20,11 @@
           <!-- <div class="cardbox col-md-4 col-sm-6"> -->
             <div class="card bg-dark">
               <img class="card-img-bottom" src="<%= mural.image %>" alt="" />
-              <div class="card-img-overlay">
-                <p class="card-text"><%= mural.location %></p>
-              </div>
+              <a href="/murals/<%= mural.id %>">
+                <div class="card-img-overlay">
+                  <p class="card-text"><%= mural.location.city %><span>, <%= mural.location.state %></span></p>
+                </div>
+              </a>
             </div>
           <!-- </div> -->
         <% }); %>

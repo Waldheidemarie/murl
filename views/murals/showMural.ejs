@@ -1,8 +1,30 @@
 <% include ../partials/header %>
 
-<div class="container">
-  
-
+<div class="container mt-5">
+  <div class="card mb-3">
+    <img class="card-img-top" src="<%= mural.image %>" alt="">
+    <div class="card-body">
+      <h3 class="card-title"><%= mural.title %></h3>
+      <h5 class="card-title"><span class="text-muted">artist: </span> <%= mural.artist %></h5>
+      <p class="card-text"><%= mural.location.city %>, <%= mural.location.state %></p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <p class="card-text"><%= mural.info %></p>
+      <p class="card-text">posted by: <%= mural.credit %></p>
+    </div>
+  </div>
 </div>
 
 <% include ../partials/footer %>
+
+
+<!-- 
+  NOTES:
+  --------------------------------------------
+  - Consider carousel to display other
+  work by same artist. Would have to do something
+  like pulling artist's name from db and making 
+  sure that its not for the same title and display
+  those images.
+  - Consider paginating over murals to that image info.
+  - Need to link to Instagram, Pinterest, Facebook accounts
+-->

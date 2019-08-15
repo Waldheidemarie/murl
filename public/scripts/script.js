@@ -1,4 +1,5 @@
 
+// Preview image that was uploaded 'views/murals/newMural.ejs'
 function previewFile() {
   const imgTag = document.getElementById('imgTag');
   const inputFile = document.getElementById('inputFile').files[0];
@@ -14,4 +15,6 @@ function previewFile() {
     fileReader.readAsDataURL(inputFile);
   }
 }
+
+
 

@@ -15,6 +15,30 @@ const data = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
   },
   {
+    title: 'Greetings From Austin',
+    artist: 'Todd Sanders',
+    location: {
+      city: 'Austin',
+      state: 'TX'
+    },
+    credit: 'Unknown',
+    image: '/images/greetings-austin.jpg',
+    info:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
+  },
+  {
+    title: 'Double Crossed',
+    artist: 'D*Face',
+    location: {
+      city: 'New York',
+      state: 'NY'
+    },
+    credit: 'Unknown',
+    image: '/images/double-crossed.jpg',
+    info:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
+  },
+  {
     title: 'Jeremiah the Innocent',
     artist: 'Daniel Johnston',
     location: {

@@ -1,5 +1,6 @@
 body {
   background: rgb(255, 255, 255);
+  padding-top: 20px;
 }
 
 button, .btn {
@@ -27,5 +28,7 @@ button, .btn {
   margin-top: 5rem;
   width: 40%;
 }
+
+
 
 
