@@ -2,15 +2,15 @@
 
 <div class="container mt-5">
   <div class="card mb-3">
-    <img class="card-img-top" src="<%= mural.image %>" alt="">
+    <img class="card-img-top" src="<%= mural.image %>" alt="Street Art Image">
     <div class="card-body">
-      <h3 class="card-title"><%= mural.title %></h3>
-      <h5 class="card-title"><span class="text-muted">artist: </span> <%= mural.artist %></h5>
-      <p class="card-text"><%= mural.location.city %>, <%= mural.location.state %></p>
+      <h3 class="card-title"><%= mural.title %><span class="text-muted"> (<%= mural.year %>)</span></h3>
+      <h5 class="card-title"><span class="text-muted">artist: </span> <%= mural.artist %>&nbsp;&nbsp;&nbsp;<span class="text-muted">location: </span><%= mural.location.city %>, <%= mural.location.state %></h5>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       <p class="card-text"><%= mural.info %></p>
       <p class="card-text">posted by: <%= mural.credit %></p>
     </div>
+    <a href="/murals" class="btn btn-dark btn-lg">Back</a>
   </div>
 </div>
 

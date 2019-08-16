@@ -2,8 +2,9 @@ const mongoose = require('mongoose');
 const Mural = require('./models/Mural');
 
 const data = [
-  {
+{
     title: "You're My Butter Half",
+    year: 2012,
     artist: 'John Rockwell',
     location: {
       city: 'Austin',
@@ -12,10 +13,11 @@ const data = [
     credit: 'Unknown',
     image: '/images/butter-half.jpg',
     info:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
+      'One of the most popular murals in Austin, painted on the wall of the United Way offices at 2000 E MLK Blvd, intersection with Alamo St.'
   },
   {
     title: 'Greetings From Austin',
+    year: 1998,
     artist: 'Todd Sanders',
     location: {
       city: 'Austin',
@@ -24,10 +26,11 @@ const data = [
     credit: 'Unknown',
     image: '/images/greetings-austin.jpg',
     info:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
+      'Originally painted in 1998 on the side-wall of the store Roadhouse Relics by one of the owners, was later restored in August 2013 after raising money in contributions from the local community.'
   },
   {
     title: 'Double Crossed',
+    year: 2016,
     artist: 'D*Face',
     location: {
       city: 'New York',
@@ -36,10 +39,11 @@ const data = [
     credit: 'Unknown',
     image: '/images/double-crossed.jpg',
     info:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
+      'This mural is in Soho, between Broome St and Lafayette, it was part of the LISA (Little Italy Street Art) Project'
   },
   {
     title: 'Jeremiah the Innocent',
+    year: 1993,
     artist: 'Daniel Johnston',
     location: {
       city: 'Austin',
@@ -48,10 +52,11 @@ const data = [
     credit: 'Unknown',
     image: '/images/hi-how-are-you.jpg',
     info:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
+      'Originally commissioned by the Sound Exchange record store building (now: "Thai, How Are You?"), this "frog" was painted on the corner of 21st St and Guadalupe right by the Univeristy of Texas in Austin.'
   },
   {
     title: 'I love you so much',
+    year: 2010,
     artist: 'Amy Cook',
     location: {
       city: 'Austin',
@@ -60,11 +65,12 @@ const data = [
     credit: 'Unknown',
     image: '/images/i-love-you-so-much.jpg',
     info:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
+      'Local musician and co-owner of Jo\'s coffee shop, Amy Cook, took a can of red spray paint and wrote that on the side of the wall as a message to her partner and majority store owner Liz Lambert.'
   },
   {
-    title: "Don't be so hard on yourself",
-    artist: 'WRDSMTH',
+    title: 'Never Never Give Up',
+    year: 2016,
+    artist: 'Mr. Brainwash',
     location: {
       city: 'Los Angeles',
       state: 'CA'
@@ -72,10 +78,11 @@ const data = [
     credit: 'Matt Winkelmeyer',
     image: '/images/never-ever-giveup.jpg',
     info:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
+      'Uncertain if the work is officially claimed by the artist, this piece was created as a result of Leo DiCaprio winning an Oscar for his role in the 2015 filme, The Revenant'
   },
   {
     title: 'The 27 Club',
+    year: 2018,
     artist: 'Eduardo Kobra',
     location: {
       city: 'New York',
@@ -84,11 +91,12 @@ const data = [
     credit: 'Unknown',
     image: '/images/the-27-club.jpg',
     info:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
+      'An excellent work of art displaying the famous artists that died at age 27 commonly known as the 27 Club: Janis Joplin, Jim Morrison, Jimmy Hendrix, Kurt Cobain, and Amy Winehouse'
   },
   {
-    title: "Don't be a dick",
-    artist: 'Meg Zanny',
+    title: 'Don\'t Be a Dick',
+    year: 2018,
+    artist: 'Meg Zany',
     location: {
       city: 'Los Angeles',
       state: 'CA'
@@ -96,19 +104,20 @@ const data = [
     credit: 'Unknown',
     image: '/images/dont-be-dick.jpg',
     info:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
+      'Reminiscing on images of Strawberry Shortcake the artist painted this piece as a message to forget social norms, do what you want but not be mean'
   },
   {
-    title: 'Woman drinking with zombie',
+    title: 'Love Her Hate Him',
+    year: 2012,
     artist: 'D*Face',
     location: {
-      city: 'Brooklyn',
+      city: 'New York',
       state: 'NY'
     },
     credit: 'Unknown',
-    image: '/images/drink-zombie.jpg',
+    image: '/images/love-her-hate-him.jpg',
     info:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusamus hic perspiciatis consectetur praesentium rem assumenda, illo unde cupiditate similique nisi repellendus veritatis, obcaecati, quae voluptatibus ad id eos? Officia!'
+      'Located at Lafayette St in Soho was painted as part of the Scope Art Fair'
   }
 ];
 
@@ -128,68 +137,72 @@ module.exports = seedDB;
 
 
 
-// IMPORTED FROM IBB
+// MORE MURALS
 //====================
-// {
-//   title: "You're My Butter Half",
-//   artist: "John Rockwell",
-//   city: "Austin, TX",
-//   credit: "Unknown",
-//   image: "https://ibb.co/qgWG9fV"
-// },
-// {
-//   title: "Jeremiah the Innocent",
-//   artist: "Daniel Johnston",
-//   city: "Austin, TX",
-//   credit: "Unknown",
-//   image: "https://ibb.co/9HLb10K"
-// },
-// {
-//   title: "I love you so much",
-//   artist: "Amy Cook",
-//   city: "Austin, TX",
-//   credit: "Unknown",
-//   image: "https://ibb.co/mHk2m75"
-// },
-// {
-//   title: "Greetings from Austin",
-//   artist: "Todd Sanders",
-//   city: "Austin, TX",
-//   credit: "Unknown",
-//   image: "https://ibb.co/C2rJrrg"
-// },
-// {
-//   title: "Don't be a dick",
-//   artist: "Meg Zanny",
-//   city: "Los Angeles, CA",
-//   credit: "Unknown",
-//   image: "https://ibb.co/44h9hZL"
-// },
-// {
-//   title: "Woman drinking with zombie",
-//   artist: "D*Face",
-//   city: "Brooklyn, NY",
-//   credit: "Unknown",
-//   image: "https://ibb.co/wYF4NRV"
-// },
-// {
-//   title: "Girl with pink glasses",
-//   artist: "Unknown",
-//   city: "Birmingham, UK",
-//   credit: "Unknown",
-//   image: "https://ibb.co/album/iw4iov"
-// },
-// {
-//   title: "Don't be so hard on yourself",
-//   artist: "WRDSMTH",
-//   city: "Los Angeles, CA",
-//   credit: "Matt Winkelmeyer",
-//   image: "https://ibb.co/fSm2RTn"
-// },
-// {
-//   title: "The 27 Club",
-//   artist: "Eduardo Kobra",
-//   city: "New York, NY",
-//   credit: "Unknown",
-//   image: "https://ibb.co/xS7CvFZ"
-// }
+/* Template
+{
+  title: '',
+  year: '',
+  artist: '',
+  location: {
+     city: '',
+     state: ''
+   } ,
+  credit: '',
+  image: '',
+  info: ''
+}
+*/
+
+/*
+
+{
+  title: 'Billie Holiday - Life Is Beautiful',
+  year: '2011',
+  artist: 'Banksy',
+  location: {
+     city: 'Los Angeles',
+     state: 'CA'
+   },
+  credit: 'Unknown',
+  image: '/images/life-is-beautiful.jpg',
+  info: 
+    'There's some confusion as to when and by whom this mural was created, 
+    some sources list Banksy and others Mr. Brainwash, and it looks like it 
+    was painted on 2011, although the year is also uncertain.'
+}
+
+{
+  title: 'Venice Kinesis',
+  year: '2010',
+  artist: 'Rip Cronk',
+  location: {
+     city: 'Venice',
+     state: 'CA'
+   } ,
+  credit: 'Unknown',
+  image: '/images/venice-kinesis.jpg',
+  info: 
+    'The artist updated this piece from a previous mural called "Venice Reconstituted", 
+    it's all in acrylic and it is located on the west wall of Danny's Deli at the corner 
+    of Winward Ave and Speedway in Venice.'
+}
+
+{
+  title: 'Peace Elephant',
+  year: '2011',
+  artist: 'Shepherd Fairey',
+  location: {
+     city: 'Los Angeles',
+     state: 'CA'
+   } ,
+  credit: 'Unknown',
+  image: '/images/peace-elephant.jpg',
+  info: 
+    'It took the artist and his crew more than a week to create, and its located 
+    at one of the walls of the West Hollywood Library.'
+}
+
+*/
+
+

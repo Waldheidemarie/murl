@@ -36,6 +36,7 @@ app.get('/murals', (req, res) => {
 // ----------------------
 app.post('/murals', (req, res) => {
   const title = req.body.title;
+  const year = req.body.year;
   const artist = req.body.artist;
   const location = req.body.location;
   const image = req.body.image;
@@ -44,6 +45,7 @@ app.post('/murals', (req, res) => {
   const info = req.body.info;
   const newMural = {
     title: title,
+    year: year,
     artist: artist,
     location: {
       city: city,
