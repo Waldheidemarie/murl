@@ -1,6 +1,7 @@
+/* all */
 body {
   background: rgb(255, 255, 255);
-  padding-top: 20px;
+  padding-top: 70px;
 }
 
 button, .btn {
@@ -8,6 +9,8 @@ button, .btn {
   /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1); */
 }
 
+
+/* indexMural & showMural */
 .card-img-overlay {
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
@@ -24,6 +27,7 @@ button, .btn {
   padding: .10rem;
 }
 
+/* newMural */
 .css-forms {
   margin-top: 5rem;
   width: 40%;

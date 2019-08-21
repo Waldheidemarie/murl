@@ -1,7 +1,7 @@
 <% include ../partials/header %>
 
-<div class="container mt-5">
-  <div class="card mb-3">
+<div class="container">
+  <div class="card col-md-6">
     <img class="card-img-top" src="<%= mural.image %>" alt="Street Art Image">
     <div class="card-body">
       <h3 class="card-title"><%= mural.title %><span class="text-muted"> (<%= mural.year %>)</span></h3>
@@ -12,14 +12,27 @@
     </div>
     <a href="/murals" class="btn btn-dark btn-lg">Back</a>
   </div>
+  <div class="card col-md-6">
+
+  </div>
 </div>
 
 <% include ../partials/footer %>
 
 
 <!-- 
+  GRID:
+  --------------------------------------------
+  .col-    (< 576px)
+  .col-sm- (576px - 767px)
+  .col-md- (768px - 991px)
+  .col-lg- (992px - 1199px)
+  .col-xl- (1199px >)
+
   NOTES:
   --------------------------------------------
+  - Google Maps API - Places (Free)
+    - need API KEY & url requests to an <iframe>
   - Consider carousel to display other
   work by same artist. Would have to do something
   like pulling artist's name from db and making 

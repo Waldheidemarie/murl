@@ -68,7 +68,7 @@ app.post('/murals', (req, res) => {
 // NEW: show form to create
 // ------------------------
 app.get('/murals/new', (req, res) => {
-  res.render('murals/newMural');
+  res.render('murals/newMural', {api_key: process.env.GOOGLE_API_KEY});
 });
 
 // SHOW: show single mural

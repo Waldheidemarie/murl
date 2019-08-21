@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const muralSchema = new Schema({
   title: String,
-  year: Number,
+  year: String,
   artist: String,
   location: {
     city: String,

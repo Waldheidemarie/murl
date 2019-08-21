@@ -16,5 +16,14 @@ function previewFile() {
   }
 }
 
+// Google Maps API
+var inputLocation = document.getElementById('searchTextField');
+var options = {
+  types: ['(cities)'],
+  componentRestrictions: {country: 'us'}
+};
+
+autocomplete = new google.maps.places.Autocomplete(inputLocation, options);
+
 
 
